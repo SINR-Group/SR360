@@ -1,23 +1,22 @@
-Video Quality Assessment using Deep Learning
-============================================
+Super Resolution for 360 video streaming
+========================================
 
-A Keras and Tensorflow implementation of video quality assessment using deep neural networks is proposed. We propose CNN + LSTM architecture to recognize and synthesize both spatial and temporal artifacts of video impairements respectively. The architecture is shown below.
+A Keras and Tensorflow implementation of super resolution using deep neural networks is proposed. The architecture is shown below.
 
 Network Architecture
 --------------------
 
 <p align="center">
-  <img src="assets/superresolution.pdf" width="640" height="400" />
+  <img src="assets/superresolution.png" width="640" height="400" />
 </p>
 
 Training
 -----------
 
-- We used video samples of 30 seconds each to train the model.
-- We first extract individual frames of the video from each video sample and create a numpy array out frames.
-- We create numpy array of MOS (i.e, video quality mean opinion score collected from users) that is corresponding to each sample.
-- We feed these frames of a video sample to CNNs followed by a series of Time Distributed LSTM. 
-- Finally, a softmax is used to classify the video sample quality.
+- We divide the video temporal consecutive segments of 1 second duration
+- We downsample the images of each segment and feed both downsampled and original image for training
+- Each video segment has its own model (we called it as a micro-model because it is trained on a little data of 30 images)
+- We overfit the model intentionally as there is no test phase
 
 Prerequisites
 -------------
@@ -30,4 +29,4 @@ Prerequisites
 Authors
 -------
 
-**Mallesham Dasari, Pranjal Sahu, Yang Qiu**
+**Pranjal Sahu, Mallesham Dasari**
