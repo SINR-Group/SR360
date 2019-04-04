@@ -7,7 +7,7 @@ Network Architecture
 --------------------
 
 <p align="center">
-  <img src="assets/superresolution-1.jpg" width="2160" height="400" />
+  <img src="assets/superresolution-1.jpg" width="1080" height="200" />
 </p>
 
 Training
