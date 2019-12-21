@@ -1,5 +1,5 @@
-Super Resolution for 360 video streaming
-========================================
+Super Resolution for Improving Video Quality
+============================================
 
 A Keras and Tensorflow implementation of super resolution using deep neural networks is proposed. The architecture is shown below.
 
